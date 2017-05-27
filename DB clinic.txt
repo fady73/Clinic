@@ -1,0 +1,180 @@
+create database if not exists clinic;
+use clinic;
+
+create table patient
+     (
+     ssn int primary key,
+     f_name varchar(20),
+     l_name varchar(20),
+     address varchar(20),
+     phone varchar(11),
+     date text,
+     describtion text
+     );
+
+
+create table diseases
+     (
+      d_id int primary key auto_increment,
+      name text
+     );
+
+create table medicines
+     (
+      m_id int primary key auto_increment,
+      name text,
+      price int 
+     );
+
+
+
+create table diseases_medicines
+     (
+      d_id int,
+      m_id int,
+      primary key (d_id,m_id),
+      foreign key (d_id) references diseases (d_id) on delete cascade on update cascade,
+      foreign key (m_id) references medicines (m_id) on delete cascade on update cascade
+     );
+
+
+create table patient_medicines
+	(
+	p_id int ,
+	m_id int,
+	primary key (p_id ,m_id),
+        foreign key (p_id) references patient(ssn) on delete cascade on update cascade,
+        foreign key (m_id) references medicines (m_id) on delete cascade on update cascade
+	);
+
+
+create table patient_diseases
+	(
+	p_id int ,
+	d_id int,
+	primary key (p_id ,d_id),
+        foreign key (p_id) references patient(ssn) on delete cascade on update cascade,
+        foreign key (d_id) references diseases (d_id) on delete cascade on update cascade
+	);
+
+
+
+
+
+
+
+insert into patient values 
+(123456789, 'haytham', 'farag', 'cairo', '01235487965','2016-12-17' ,'blood in urine'),
+(213456789, 'mena', 'nady', 'assiut', '01235469854','2016-12-17' ,'blood in urine'),
+(312456789, 'mena', 'magdy', 'assiut', '01254789635','2016-12-17' ,'neck pain'),
+(412356789, 'mena', 'adel', 'assiut', '0125369854','2016-12-17' ,'anal pain'),
+(512346789, 'fady', 'khayret', 'assiut', '01236587948','2016-12-17' ,'eye redness'),
+(612345789, 'mohamed', 'mahmod', 'manflot', '01236548547','2016-12-17' ,'abdominal pain'),
+(712345689, 'momen', 'salah', 'abo tig', '01245873693','2016-12-17' ,'chest pain'),
+(812345679, 'mostafa', 'eldeb', 'sohag', '01254789632','2016-12-17' ,'oedema'),
+(912345678, 'mostafa', 'abd elalem', 'luxor', '01236547845','2016-12-17' ,'blindness'),
+(234567891, 'ahmed', 'mohamed', 'luxor', '01023654789','2016-12-17' ,'headache'),
+(324567891, 'alaa', 'naiem', 'luxor', '01023654798','2016-12-17' ,'coughing up blood'),
+(423456891, 'abanwab', 'magdy', 'luxor', '01032654879','2016-12-17' ,'diplopia'),
+(523467891, 'abanwab', 'monier', 'assiut', '01032589647','2016-12-17' ,'diarrhoea'),
+(623457891, 'pola', 'phisal', 'qina', '01093265847','2016-12-17' ,'cough'),
+(723456891, 'masio', 'samir', 'luxor', '01032986547','2016-12-17' ,'chest pain'),
+(823456791, 'pola', 'yohana', 'qina', '01032654879','2016-12-17' ,'eye redness'),
+(923456781, 'ebram', 'ezat', 'sohag', '01325469870','2016-12-17' ,'diplopia'),
+(134567892, 'kero', 'monier', 'sohag', '01324569871','2016-12-17' ,'oedema'),
+(314567892, 'fady', 'samir', 'cairo', '01329685740','2016-12-17' ,'headache'),
+(413567892, 'martin', 'mishel', 'cairo', '01532145698','2016-12-17' ,'headache');
+
+
+
+insert into diseases (name) values
+('H1N1') , ('bliharisea'),
+('cancer') , ('heart attack'),
+('fever') , ('eating disorders'),
+('diabets') , ('headache'),
+('stomach ech') , ('blood presure'),
+('bledding') , ('small pox'),
+('dysentery') , ('strock');
+
+insert into medicines (name,price) values
+('morofine' , 25) , ('dolphine' , 13),
+('hipiotic' , 27) , ('senilarg' , 7),
+('aplex' , 122) , ('activade' , 6),
+('orlex' , 125) , ('aspoced' , 6),
+('defastone' , 90) , ('zentak' , 75),
+('amarel-1' , 50) , ('amarel-2' , 60),
+('amarel-3' , 70) , ('overaflam' , 250),
+('catafast' , 30) , ('gilocofag' , 120),
+('geramicine' , 45) , ('revo' , 10),
+('novalgine' , 55) , ('recormon' , 150);
+
+
+
+insert into diseases_medicines values
+(1 , 1) , (2 , 2) , (3 , 3),
+(4 , 4) , (5 , 5) , (6 , 6),
+(7 , 7) , (8 , 8) , (9 , 9),
+(10 , 10) , (11 , 11) , (12 , 12),
+(13 , 13) , (14 , 14) , (5 , 17),
+(1 , 15) , (2 , 16) , (4 , 20),
+(3 , 19) , (11 , 18) , (10 , 15),
+(4 , 18) , (1 , 19) , (9 , 15),
+(7 , 16) , (8 , 20) , (9 , 19),
+(1 , 16) , (2 , 15) , (4 , 19),
+(3 , 20) , (12 , 15) , (12 , 18),
+(11 , 15) , (11 , 19) , (6 , 16),
+(6 , 20) , (8 , 19) , (10 , 20);
+
+insert into patient_medicines values
+(123456789 ,  1),
+(213456789 ,  12),
+(312456789 ,  5),
+(412356789 ,  11),
+(512346789 ,  6),
+(612345789 ,  4),
+(712345689 ,  3),
+(812345689 ,  14),
+(912345678 , 13),
+(234567891 ,  15),
+(324567891 ,  16),
+(423567891 ,  17),
+(523467891 ,  2),
+(623457891 ,  18),
+(723457891 ,  19),
+(823456791 ,  20),
+(923456781 ,  5),
+(134567892 ,  13),
+(314567892 ,  9),
+(413567892 , 10);
+
+insert into patient_diseases values
+(123456789 , 1),
+(213456789 , 12),
+(312456789 , 5),
+(412356789 , 11),
+(512346789 , 6),
+(612345789 , 10),
+(712345689 , 13),
+(812345689 , 4),
+(912345678 , 3),
+(234567891 , 5),
+(324567891 , 6),
+(423567891 , 7),
+(523467891 , 2),
+(623457891 , 8),
+(723457891 , 12),
+(823456791 , 14),
+(923456781 , 5),
+(134567892 , 13),
+(314567892 , 9),
+(413567892 , 10);
+
+
+
+ select d.name,m.name from diseases as d, medicines as m
+     where d.d_id=m.m_id and d.name='H1N1';
+
+select p.ssn,p.f_name,p.l_name,p.describtion,p.date,d.name,m.name
+     from patient as p,diseases as d,medicines as m,patient_diseases as pd,patient_medicines as pm,diseases_medicines as dm
+     where p.ssn=pm.p_id and m.m_id=pm.m_id and m.m_id=dm.m_id and d.d_id=dm.d_id and pd.p_id=p.ssn and pd.d_id=d.d_id
+     and p.f_name='mena';

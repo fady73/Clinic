@@ -1,0 +1,25 @@
+F:\books\seventh term\AdvancedDataBase\projects\DB_Project\DB_Project\bin\Debug\DB_Project.exe
+F:\books\seventh term\AdvancedDataBase\projects\DB_Project\DB_Project\bin\Debug\DB_Project.pdb
+F:\books\seventh term\AdvancedDataBase\projects\DB_Project\DB_Project\obj\x86\Debug\DB_Project.Add_Patient.resources
+F:\books\seventh term\AdvancedDataBase\projects\DB_Project\DB_Project\obj\x86\Debug\DB_Project.Form1.resources
+F:\books\seventh term\AdvancedDataBase\projects\DB_Project\DB_Project\obj\x86\Debug\DB_Project.Properties.Resources.resources
+F:\books\seventh term\AdvancedDataBase\projects\DB_Project\DB_Project\obj\x86\Debug\DB_Project.Report.resources
+F:\books\seventh term\AdvancedDataBase\projects\DB_Project\DB_Project\obj\x86\Debug\DB_Project.csproj.GenerateResource.Cache
+F:\books\seventh term\AdvancedDataBase\projects\DB_Project\DB_Project\obj\x86\Debug\DB_Project.exe
+F:\books\seventh term\AdvancedDataBase\projects\DB_Project\DB_Project\obj\x86\Debug\DB_Project.pdb
+F:\books\seventh term\AdvancedDataBase\projects\DB_Project\DB_Project\obj\x86\Debug\DB_Project.csprojResolveAssemblyReference.cache
+F:\books\seventh term\AdvancedDataBase\projects\DB_Project\DB_Project\bin\Debug\DB_Project.exe.config
+F:\books\seventh term\AdvancedDataBase\projects\DB_Project\DB_Project\obj\x86\Debug\DB_Project.Crystal.resources
+C:\Users\Today\Desktop\DB_Project\DB_Project\bin\Debug\DB_Project.exe.config
+C:\Users\Today\Desktop\DB_Project\DB_Project\obj\x86\Debug\DB_Project.exe
+C:\Users\Today\Desktop\DB_Project\DB_Project\obj\x86\Debug\DB_Project.pdb
+C:\Users\Today\Desktop\DB_Project\DB_Project\obj\x86\Debug\DB_Project.csprojResolveAssemblyReference.cache
+C:\Users\Today\Desktop\DB_Project\DB_Project\obj\x86\Debug\DB_Project.Add_Patient.resources
+C:\Users\Today\Desktop\DB_Project\DB_Project\obj\x86\Debug\DB_Project.Crystal.resources
+C:\Users\Today\Desktop\DB_Project\DB_Project\obj\x86\Debug\DB_Project.Form1.resources
+C:\Users\Today\Desktop\DB_Project\DB_Project\obj\x86\Debug\DB_Project.Properties.Resources.resources
+C:\Users\Today\Desktop\DB_Project\DB_Project\obj\x86\Debug\DB_Project.Report.resources
+C:\Users\Today\Desktop\DB_Project\DB_Project\obj\x86\Debug\DB_Project.csproj.GenerateResource.Cache
+C:\Users\Today\Desktop\New folder\DB_Project\bin\Debug\DB_Project.exe.config
+C:\Users\Today\Desktop\New folder\DB_Project\obj\x86\Debug\DB_Project.exe
+C:\Users\Today\Desktop\New folder\DB_Project\obj\x86\Debug\DB_Project.pdb
